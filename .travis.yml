@@ -14,5 +14,5 @@ install:
 - npm install -g newman
  
 script:
-   - docker run -e CI=true -v $(pwd):/tmp/collections -t raks/postmanapi-docker newman run /tmp/collections/collection2.json 
+   - docker run -e CI=true -t postman/newman_ubuntu1404 newman run /tmp/collections/collection2.json 
   
