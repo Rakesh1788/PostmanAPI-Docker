@@ -1,4 +1,4 @@
-FROM node:node_ubuntu1404
+FROM ubuntu:14.04.2
 
 WORKDIR '/tmp/collections'
 
