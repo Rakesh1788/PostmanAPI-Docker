@@ -1,7 +1,9 @@
-FROM node:10.11.0-alpine
+FROM node:postman/newman_ubuntu1404
 
-WORKDIR /tmp/collections 
-COPY collection*.json ./
+WORKDIR '/tmp/collections'
+
+COPY collection*.json .
+
 ENTRYPOINT ["newman"]
 
 COPY . .
