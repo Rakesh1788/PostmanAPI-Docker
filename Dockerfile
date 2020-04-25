@@ -1,4 +1,4 @@
-FROM node:postman/newman_ubuntu1404
+FROM node:10.11.0-alpine
 
 WORKDIR '/tmp/collections'
 
