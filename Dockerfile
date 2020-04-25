@@ -1,7 +1,7 @@
 FROM ubuntu:14.04.2
 
-WORKDIR /tmp/collections
+WORKDIR /etc/newman
 
-COPY collection*.json ./
+COPY . .
 
 ENTRYPOINT ["newman"]
