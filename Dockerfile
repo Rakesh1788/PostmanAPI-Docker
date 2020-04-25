@@ -1,6 +1,6 @@
-FROM ubuntu:14.04.2
+FROM node_ubuntu1404:latest
 
-WORKDIR /etc/newman
+WORKDIR /tmp/collections
 
 COPY collection*.json ./
 
