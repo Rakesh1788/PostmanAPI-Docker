@@ -11,7 +11,7 @@ before_install:
   - docker build -t raks/postmanapi-docker -f Dockerfile .
 
 install:
-- npm install newman
+- npm install -g newman
  
 script:
    - docker run -e CI=true -v $(pwd):/tmp/collections -t raks/postmanapi-docker run /tmp/collections/collection2.json 
