@@ -8,11 +8,9 @@ services:
   - docker
 
 before_install:
-  - docker build -t postman/newman_ubuntu1404 -f Dockerfile .
+  - docker build -t raks/PostmanAPI-Docker -f Dockerfile .
   
-install:
-- npm install newman
-  
+ 
 script:
-   - docker run -v $(pwd):/tmp/collections -t postman/newman_ubuntu1404 run /tmp/collections/collection2.json 
+   - docker run -e CI=true -v $(pwd):/tmp/collections -t raks/PostmanAPI-Docker run /tmp/collections/collection2.json 
   
