@@ -14,5 +14,5 @@ install:
 - npm install -g newman
  
 script:
-   - docker run -e CI=true -t postman/newman_ubuntu1404 newman run /etc/newman/collection2.json 
+   - docker run -e CI=true -t postman/newman_ubuntu1404 run /etc/newman/collection2.json 
   
