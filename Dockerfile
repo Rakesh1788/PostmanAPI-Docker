@@ -1,5 +1,4 @@
-FROM node:10.11.0-alpine
-
+FROM node:node_ubuntu1404
 
 WORKDIR '/tmp/collections'
 
