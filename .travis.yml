@@ -10,9 +10,6 @@ services:
 before_install:
   - docker build -t raks/postmanapi-docker -f Dockerfile .
 
-install:
-- npm install -g newman
- 
 script:
-   - docker run -e CI=true -v $(pwd):/etc/newman -t raks/postmanapi-docker:latest run /etc/newman/collection1.json
+   - docker run -e CI=true -t raks/postmanapi-docker:latest run /etc/newman/collection1.json
   
