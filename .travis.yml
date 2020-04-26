@@ -11,5 +11,5 @@ before_install:
   - docker build -t raks/postmanapi-docker -f Dockerfile .
 
 script:
-   - docker run -e CI=true -t raks/postmanapi-docker:latest run /etc/newman/collection1.json
+   - docker run -e CI=true -t raks/postmanapi-docker:latest run /etc/newman/collection2.json
   
